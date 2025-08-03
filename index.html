@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undangan Pernikahan Dinda & Raka</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #d6336c;
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 10px;
+    }
+    .nama-tamu {
+      font-weight: bold;
+      color: #d63384;
+    }
+    .container {
+      border: 2px dashed #d63384;
+      border-radius: 20px;
+      padding: 30px;
+      background-color: #fff;
+      max-width: 600px;
+      margin: auto;
+    }
+    .button {
+      background-color: #d63384;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Undangan Pernikahan</h1>
+    <p>Dengan bahagia kami mengundang</p>
+    <p class="nama-tamu" id="namaTamu">Tamu Undangan</p>
+    <p>Untuk menghadiri pernikahan kami:</p>
+    <p><strong>Dinda & Raka</strong></p>
+    <p>Tanggal: 25 Agustus 2025</p>
+    <p>Tempat: Gedung Serbaguna Bahagia, Makassar</p>
+    <a class="button" href="https://maps.app.goo.gl/example" target="_blank">Lihat Lokasi</a>
+  </div>
+
+  <script>
+    // Ambil nama tamu dari URL (contoh: undangan.html?nama=Ibu+Siti)
+    const query = new URLSearchParams(window.location.search);
+    const nama = query.get('nama');
+    if (nama) {
+      document.getElementById('namaTamu').textContent = decodeURIComponent(nama);
+    }
+  </script>
+</body>
+</html>
